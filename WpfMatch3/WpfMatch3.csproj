@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="GameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +67,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameWindow.xaml.cs">
+      <DependentUpon>GameWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -93,6 +101,38 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Bomb\Blue.png" />
+    <Resource Include="Resources\Bomb\Green.png" />
+    <Resource Include="Resources\Bomb\Orange.png" />
+    <Resource Include="Resources\Bomb\Purple.png" />
+    <Resource Include="Resources\Bomb\Red.png" />
+    <Resource Include="Resources\Bomb\Yellow.png" />
+    <Resource Include="Resources\Horizontal\Blue.png" />
+    <Resource Include="Resources\Horizontal\Green.png" />
+    <Resource Include="Resources\Horizontal\Orange.png" />
+    <Resource Include="Resources\Horizontal\Purple.png" />
+    <Resource Include="Resources\Horizontal\Red.png" />
+    <Resource Include="Resources\Horizontal\Yellow.png" />
+    <Resource Include="Resources\Usual\Blue.png" />
+    <Resource Include="Resources\Usual\Green.png" />
+    <Resource Include="Resources\Usual\Orange.png" />
+    <Resource Include="Resources\Usual\Purple.png" />
+    <Resource Include="Resources\Usual\Red.png" />
+    <Resource Include="Resources\Usual\Yellow.png" />
+    <Resource Include="Resources\Vertical\Blue.png" />
+    <Resource Include="Resources\Vertical\Green.png" />
+    <Resource Include="Resources\Vertical\Orange.png" />
+    <Resource Include="Resources\Vertical\Purple.png" />
+    <Resource Include="Resources\Vertical\Red.png" />
+    <Resource Include="Resources\Vertical\Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\close_icon.png" />
+    <Resource Include="Resources\play_icon.png" />
+    <Resource Include="Resources\refresh_icon.png" />
+    <Resource Include="Resources\wallpaper.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

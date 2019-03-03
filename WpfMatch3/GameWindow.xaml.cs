@@ -10,26 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfMatch3
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для GameWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GameWindow : Window
     {
-        public MainWindow()
+        public GameWindow()
         {
             InitializeComponent();
         }
-        
-        private void LeftUp_Play(object sender, MouseButtonEventArgs e)
+
+        private void ElementClicked(object sender, RoutedEventArgs e)
         {
-            GameWindow gw = new GameWindow();
-            gw.Show();
-            this.Close();
+
         }
     }
 }
