@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="GameWindow" MinHeight="580" MinWidth="580">
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,-30">
+    <Grid VerticalAlignment="Stretch" Margin="0" MinWidth="11">
         <Grid.Background>
             <ImageBrush ImageSource="Resources/wallpaper.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
@@ -17,9 +17,8 @@
                 <Label DockPanel.Dock="Right" Content="SCORE: 0" Height="30" MinWidth="80" Margin="5"/>
                 <ProgressBar DockPanel.Dock="Top" Minimum="0" Maximum="60" Height="30" Margin="5"/>
             </DockPanel>
-            <Canvas Width="500" Height="500" Button.Click ="ElementClicked" >
-                <Button Canvas.Top ="50" Content="GI"/>
-                <Button Canvas.Left="100" Content="GI"/>
+            <Canvas  x:Name="GameCanvas" Height="500" Width="500">
+                
             </Canvas>
         </StackPanel>
     </Grid>
