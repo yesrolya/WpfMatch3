@@ -23,17 +23,16 @@ namespace WpfMatch3
             img = original.img;
             size = original.size;
         }
-        public void Change(Random rand, int colors = 6)
+        public void Change(Random rand, int colors = 5)
         {
             color = (Color)rand.Next(0, colors);
             type = TypeCandy.Usual;
             var path = @"pack://application:,,,/Resources/" + type.ToString("F") + "/" + color.ToString("F") + ".png";
             img.Source = new BitmapImage(new Uri(path));
-            img.Opacity = 1;
         }
         //создает случайный элемент обычного типа
         //привязывает его к контейнеру и устанавливает на соответствующую позицию
-        public Candy(Random rand, Canvas container, int row, int column, int size, int colors = 6)
+        public Candy(Random rand, Canvas container, int row, int column, int size, int colors = 5)
         {
             color = (Color)rand.Next(0, colors);
             type = TypeCandy.Usual;
@@ -56,7 +55,6 @@ namespace WpfMatch3
             Canvas.SetTop(img, size * row);
             Canvas.SetZIndex(img, 1);
         }
-
 
         public void ElementClicked(object sender, RoutedEventArgs e)
         {
@@ -81,5 +79,4 @@ namespace WpfMatch3
             return this.type == TypeCandy.Bomb;
         }
     }
-
 }

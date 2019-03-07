@@ -7,18 +7,19 @@ namespace WpfMatch3
     public partial class GameWindow : Window
     {
         private GameField game;
+        private MyTimer timer;
 
         public GameWindow()
         {
             InitializeComponent();
-            FillGAmeField();
-            //game.CheckForCombinations();
+            StartGame();
         }
         
-        private void FillGAmeField()
+        private void StartGame()
         {
-            game = new GameField(GameCanvas);
+            int maxTime = 60;
+            game = new GameField(GameCanvas, ScoreLabel);
+            timer = new MyTimer(game, TimeBar, TimeLabel, maxTime);
         }
-        
     }
 }
